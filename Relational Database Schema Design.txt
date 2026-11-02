@@ -1,0 +1,15 @@
+t_venues (Physical Properties)
+   ├── setting_type          --> ['Indoor', 'Outdoor', 'Hybrid']
+   └── parking_fee_applies   --> Boolean (Tracks transit/overhead friction)
+
+  t_events (Organizer Master Data)
+   ├── event_frequency       --> ['Annual', 'Monthly', 'One-Time']
+   └── accepts_vouchers      --> Boolean (Crucial for Jade Night Market vouchers)
+
+  t_event_instances (Operational Hurdles & Margins)
+   ├── calendar_date         --> TEXT (YYYY-MM-DD for standard SQLite sorting)
+   ├── fee_amount            --> REAL (The cash footprint risk)
+   ├── target_layout         --> TEXT (Your ideal dual 24"x16" table plan)
+   ├── allocated_layout      --> TEXT (Actual footprint provided by organizers)
+   ├── anticipated_revenue   --> REAL (Your predictive margin target)
+   └── status_enum           --> ['Pipeline', 'Applied', 'Waitlisted', 'Accepted', 'Completed']
